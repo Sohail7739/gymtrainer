@@ -2,6 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/gymtrainer',
+  assetPrefix: '/gymtrainer/',
   images: {
     domains: ['images.unsplash.com', 'unsplash.com'],
     unoptimized: true
