@@ -69,13 +69,13 @@ export default function AuthModal({ isOpen, onClose, onLogin }: AuthModalProps) 
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+      <div className="bg-gray-900 rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto border border-gray-700">
         <div className="p-6">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-white">
               {isLogin ? t('auth.welcomeBack') : t('auth.joinRayaan')}
             </h2>
-            <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
+            <button onClick={onClose} className="text-gray-400 hover:text-gray-300">
               <X className="h-6 w-6" />
             </button>
           </div>
@@ -87,7 +87,7 @@ export default function AuthModal({ isOpen, onClose, onLogin }: AuthModalProps) 
                 <input
                   type="text"
                   placeholder={t('auth.fullName')}
-                  className={`w-full ${language === 'ar' ? 'pr-10 pl-4' : 'pl-10 pr-4'} py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${language === 'ar' ? 'text-right' : 'text-left'}`}
+                  className={`w-full ${language === 'ar' ? 'pr-10 pl-4' : 'pl-10 pr-4'} py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent placeholder-gray-400 ${language === 'ar' ? 'text-right' : 'text-left'}`}
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                   required
@@ -100,7 +100,7 @@ export default function AuthModal({ isOpen, onClose, onLogin }: AuthModalProps) 
               <input
                 type="email"
                 placeholder={t('auth.emailAddress')}
-                className={`w-full ${language === 'ar' ? 'pr-10 pl-4' : 'pl-10 pr-4'} py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${language === 'ar' ? 'text-right' : 'text-left'}`}
+                className={`w-full ${language === 'ar' ? 'pr-10 pl-4' : 'pl-10 pr-4'} py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent placeholder-gray-400 ${language === 'ar' ? 'text-right' : 'text-left'}`}
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
                 required
@@ -112,7 +112,7 @@ export default function AuthModal({ isOpen, onClose, onLogin }: AuthModalProps) 
               <input
                 type="password"
                 placeholder={t('auth.password')}
-                className={`w-full ${language === 'ar' ? 'pr-10 pl-4' : 'pl-10 pr-4'} py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${language === 'ar' ? 'text-right' : 'text-left'}`}
+                className={`w-full ${language === 'ar' ? 'pr-10 pl-4' : 'pl-10 pr-4'} py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent placeholder-gray-400 ${language === 'ar' ? 'text-right' : 'text-left'}`}
                 value={formData.password}
                 onChange={(e) => setFormData({...formData, password: e.target.value})}
                 required
@@ -126,7 +126,7 @@ export default function AuthModal({ isOpen, onClose, onLogin }: AuthModalProps) 
                   <input
                     type="tel"
                     placeholder={t('auth.phoneNumber')}
-                    className={`w-full ${language === 'ar' ? 'pr-10 pl-4' : 'pl-10 pr-4'} py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${language === 'ar' ? 'text-right' : 'text-left'}`}
+                    className={`w-full ${language === 'ar' ? 'pr-10 pl-4' : 'pl-10 pr-4'} py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent placeholder-gray-400 ${language === 'ar' ? 'text-right' : 'text-left'}`}
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   />
@@ -136,21 +136,21 @@ export default function AuthModal({ isOpen, onClose, onLogin }: AuthModalProps) 
                   <input
                     type="number"
                     placeholder={t('auth.age')}
-                    className={`px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${language === 'ar' ? 'text-right' : 'text-left'}`}
+                    className={`px-4 py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent placeholder-gray-400 ${language === 'ar' ? 'text-right' : 'text-left'}`}
                     value={formData.age}
                     onChange={(e) => setFormData({...formData, age: e.target.value})}
                   />
                   <input
                     type="number"
                     placeholder={t('auth.weight')}
-                    className={`px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${language === 'ar' ? 'text-right' : 'text-left'}`}
+                    className={`px-4 py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent placeholder-gray-400 ${language === 'ar' ? 'text-right' : 'text-left'}`}
                     value={formData.weight}
                     onChange={(e) => setFormData({...formData, weight: e.target.value})}
                   />
                   <input
                     type="number"
                     placeholder={t('auth.height')}
-                    className={`px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${language === 'ar' ? 'text-right' : 'text-left'}`}
+                    className={`px-4 py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent placeholder-gray-400 ${language === 'ar' ? 'text-right' : 'text-left'}`}
                     value={formData.height}
                     onChange={(e) => setFormData({...formData, height: e.target.value})}
                   />
@@ -159,7 +159,7 @@ export default function AuthModal({ isOpen, onClose, onLogin }: AuthModalProps) 
                 <textarea
                   placeholder={t('auth.fitnessGoals')}
                   rows={3}
-                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${language === 'ar' ? 'text-right' : 'text-left'}`}
+                  className={`w-full px-4 py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent placeholder-gray-400 ${language === 'ar' ? 'text-right' : 'text-left'}`}
                   value={formData.goals}
                   onChange={(e) => setFormData({...formData, goals: e.target.value})}
                 />
@@ -168,7 +168,7 @@ export default function AuthModal({ isOpen, onClose, onLogin }: AuthModalProps) 
 
             <button
               type="submit"
-              className="w-full bg-primary-600 text-white py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold"
+              className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200 font-semibold shadow-lg"
             >
               {isLogin ? t('auth.signIn') : t('auth.createAccount')}
             </button>
@@ -177,16 +177,16 @@ export default function AuthModal({ isOpen, onClose, onLogin }: AuthModalProps) 
           <div className="mt-6 text-center">
             <button
               onClick={() => setIsLogin(!isLogin)}
-              className="text-primary-600 hover:text-primary-700 font-medium"
+              className="text-orange-400 hover:text-orange-300 font-medium"
             >
               {isLogin ? t('auth.noAccount') : t('auth.haveAccount')}
             </button>
           </div>
 
-          <div className="mt-4 pt-4 border-t border-gray-200">
+          <div className="mt-4 pt-4 border-t border-gray-700">
             <button
               onClick={handleTrainerLogin}
-              className="w-full bg-secondary-500 text-white py-3 rounded-lg hover:bg-secondary-600 transition-colors font-semibold"
+              className="w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white py-3 rounded-lg hover:from-teal-600 hover:to-teal-700 transition-all duration-200 font-semibold shadow-lg"
             >
               {t('auth.loginAsTrainer')}
             </button>

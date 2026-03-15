@@ -37,10 +37,10 @@ export default function Home() {
   // Don't render until client-side hydration is complete
   if (!isClient) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-dark-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading Rayaan Fitness...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
+          <p className="text-gray-300">Loading Rayaan Fitness...</p>
         </div>
       </div>
     )
@@ -51,7 +51,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-dark-900">
       <Header onAuthClick={() => setIsAuthOpen(true)} />
       <Hero onGetStarted={() => setIsAuthOpen(true)} />
       <Features />

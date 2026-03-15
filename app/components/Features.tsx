@@ -46,35 +46,36 @@ export default function Features() {
   ]
 
   return (
-    <section id="features" className="py-20 bg-gray-50">
+    <section id="features" className="py-20 bg-dark-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-4 text-center">
             {t('features.title')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto text-center">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto text-center">
             {t('features.subtitle')}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-              <div className="aspect-video overflow-hidden">
+            <div key={index} className="dark-card rounded-xl shadow-2xl overflow-hidden card-hover">
+              <div className="aspect-video overflow-hidden relative">
                 <img 
                   src={feature.image}
                   alt={feature.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent"></div>
               </div>
               <div className="p-6">
-                <div className="text-primary-600 mb-4">
+                <div className="text-primary-500 mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
