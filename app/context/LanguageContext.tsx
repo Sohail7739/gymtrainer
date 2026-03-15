@@ -140,17 +140,7 @@ const translations = {
     'client.scheduleSoon': 'Schedule Coming Soon',
     'client.bookingSystem': 'Booking system will be available soon!',
     
-    // Trainer Dashboard
-    'trainer.totalClients': 'Total Clients',
-    'trainer.activeWorkouts': 'Active Workouts',
-    'trainer.nutritionPlans': 'Nutrition Plans',
-    'trainer.successRate': 'Success Rate',
-    'trainer.recentClients': 'Recent Clients',
-    'trainer.quickActions': 'Quick Actions',
-    'trainer.manageClients': 'Manage Clients',
-    'trainer.createWorkout': 'Create Workout',
-    'trainer.designNutrition': 'Design Nutrition Plan',
-    'trainer.clientManagement': 'Client Management',
+    // Additional Trainer Dashboard
     'trainer.workoutManagement': 'Workout Management',
     'trainer.nutritionManagement': 'Nutrition Management',
     'trainer.noClients': 'No Clients Yet',
@@ -291,17 +281,7 @@ const translations = {
     'client.scheduleSoon': 'الجدول قريباً',
     'client.bookingSystem': 'نظام الحجز سيكون متاحاً قريباً!',
     
-    // Trainer Dashboard
-    'trainer.totalClients': 'إجمالي العملاء',
-    'trainer.activeWorkouts': 'التمارين النشطة',
-    'trainer.nutritionPlans': 'خطط التغذية',
-    'trainer.successRate': 'معدل النجاح',
-    'trainer.recentClients': 'العملاء الأخيرون',
-    'trainer.quickActions': 'إجراءات سريعة',
-    'trainer.manageClients': 'إدارة العملاء',
-    'trainer.createWorkout': 'إنشاء تمرين',
-    'trainer.designNutrition': 'تصميم خطة التغذية',
-    'trainer.clientManagement': 'إدارة العملاء',
+    // Additional Trainer Dashboard
     'trainer.workoutManagement': 'إدارة التمارين',
     'trainer.nutritionManagement': 'إدارة التغذية',
     'trainer.noClients': 'لا يوجد عملاء بعد',

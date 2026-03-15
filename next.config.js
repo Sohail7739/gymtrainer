@@ -2,14 +2,11 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/gymtrainer',
-  assetPrefix: '/gymtrainer/',
+  basePath: process.env.NODE_ENV === 'production' ? '/gymtrainer' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/gymtrainer/' : '',
   images: {
     domains: ['images.unsplash.com', 'unsplash.com'],
     unoptimized: true
-  },
-  experimental: {
-    suppressHydrationWarning: true,
   },
 }
 
